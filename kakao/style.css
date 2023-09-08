@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+:root {
+  --color-background: #f9f8f8;
+  --color-text: #7f7f7f;
+}
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: "· ";
+  font-size: 14px;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* UI */
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+details {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 16px;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none; /* 기본 화살표 제거 */
+  font-size: 15px;
+  line-height: 1.46;
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* 기본 화살표 제거 */
+}
+
+details[open] summary i {
+  /* 아코디언이 열렸을 때의 CSS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transform: rotateZ(180deg);
+}
